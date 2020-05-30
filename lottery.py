@@ -1,15 +1,15 @@
 from random import sample
 
 numbers = []
-nums = 6 # сколько цифр надо отметить в игровом поле
-count = 3 # количество комбинаций
+lotts = int(input("Введите КОНЕЧНОЕ число в лотерее, например 36 или 45: "))
+nums = int(input("Введите сколько цифр отметить (например 5 или 6: "))
+count = int(input("Введите количество комбинаций: "))
 
-# Выбрать диапазон чисел, например от 1 до 45, но
-# необходимо выбрать число на 1 больше, 
-# так как последнее не включается в список
 
-for i in range(1,46):
+for i in range(lotts+1):
     numbers.append(i)
+    
+numbers.remove(0) #удаляем 0
      
 def lottery():
     print(sample(numbers,nums))

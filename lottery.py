@@ -7,11 +7,11 @@ count = int(input("Введите количество комбинаций: "))
 # Создаем список
 
 numbers = [n for n in range(1,lotts+1)]
-    
-# Выбираем случайные цифры     
-def lottery():
-    print(sample(numbers,nums))
 
 # Генерируем количество комбинаций 
-for _ in range(count):
-    print(lottery())
+for i in range(count):
+    combination = sample(numbers, nums)
+    print(combination)
+    
+
+ 
